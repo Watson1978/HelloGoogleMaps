@@ -5,6 +5,7 @@ require 'motion/project'
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'HelloGoogleMaps'
+  app.archs['iPhoneOS'] = ['armv7']
   app.vendor_project('vendor/GoogleMaps.framework',
     :static,
     :products    => %w{GoogleMaps},
