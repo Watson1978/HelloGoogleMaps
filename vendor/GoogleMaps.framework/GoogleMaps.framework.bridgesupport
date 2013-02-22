@@ -23,32 +23,32 @@
 <method class_method='true' selector='cameraWithLatitude:longitude:zoom:'>
 <arg index='0' name='latitude' declared_type='CLLocationDegrees' type='d'/>
 <arg index='1' name='longitude' declared_type='CLLocationDegrees' type='d'/>
-<arg index='2' name='zoom' declared_type='id' type='@'/>
+<arg index='2' name='zoom' declared_type='CGFloat' type='f'/>
 <retval declared_type='GMSCameraPosition*' type='@'/>
 </method>
 <method class_method='true' selector='cameraWithLatitude:longitude:zoom:bearing:viewingAngle:'>
 <arg index='0' name='latitude' declared_type='CLLocationDegrees' type='d'/>
 <arg index='1' name='longitude' declared_type='CLLocationDegrees' type='d'/>
-<arg index='2' name='zoom' declared_type='id' type='@'/>
+<arg index='2' name='zoom' declared_type='CGFloat' type='f'/>
 <arg index='3' name='bearing' declared_type='CLLocationDirection' type='d'/>
 <arg index='4' name='viewingAngle' declared_type='double' type='d'/>
 <retval declared_type='GMSCameraPosition*' type='@'/>
 </method>
 <method class_method='true' selector='cameraWithTarget:zoom:'>
 <arg index='0' name='target' declared_type='CLLocationCoordinate2D' type='{_CLLocationCoordinate2D=dd}'/>
-<arg index='1' name='zoom' declared_type='id' type='@'/>
+<arg index='1' name='zoom' declared_type='CGFloat' type='f'/>
 <retval declared_type='GMSCameraPosition*' type='@'/>
 </method>
 <method class_method='true' selector='cameraWithTarget:zoom:bearing:viewingAngle:'>
 <arg index='0' name='target' declared_type='CLLocationCoordinate2D' type='{_CLLocationCoordinate2D=dd}'/>
-<arg index='1' name='zoom' declared_type='id' type='@'/>
+<arg index='1' name='zoom' declared_type='CGFloat' type='f'/>
 <arg index='2' name='bearing' declared_type='CLLocationDirection' type='d'/>
 <arg index='3' name='viewingAngle' declared_type='double' type='d'/>
 <retval declared_type='GMSCameraPosition*' type='@'/>
 </method>
 <method selector='initWithTarget:zoom:bearing:viewingAngle:'>
 <arg index='0' name='target' declared_type='CLLocationCoordinate2D' type='{_CLLocationCoordinate2D=dd}'/>
-<arg index='1' name='zoom' declared_type='id' type='@'/>
+<arg index='1' name='zoom' declared_type='CGFloat' type='f'/>
 <arg index='2' name='bearing' declared_type='CLLocationDirection' type='d'/>
 <arg index='3' name='viewingAngle' declared_type='double' type='d'/>
 <retval declared_type='id' type='@'/>
