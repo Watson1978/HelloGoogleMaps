@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9221CFC16E79CB10079F99B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9221CFB16E79CB10079F99B /* Foundation.framework */; };
+		A9221D0116E79CB10079F99B /* fix_google_sdk_arm_issue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9221D0016E79CB10079F99B /* fix_google_sdk_arm_issue.h */; };
+		A9221D0316E79CB10079F99B /* fix_google_sdk_arm_issue.m in Sources */ = {isa = PBXBuildFile; fileRef = A9221D0216E79CB10079F99B /* fix_google_sdk_arm_issue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9221CF616E79CB10079F99B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				A9221D0116E79CB10079F99B /* fix_google_sdk_arm_issue.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A9221CF816E79CB10079F99B /* libfix_google_sdk_arm_issue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfix_google_sdk_arm_issue.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9221CFB16E79CB10079F99B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9221CFF16E79CB10079F99B /* fix_google_sdk_arm_issue-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fix_google_sdk_arm_issue-Prefix.pch"; sourceTree = "<group>"; };
+		A9221D0016E79CB10079F99B /* fix_google_sdk_arm_issue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fix_google_sdk_arm_issue.h; sourceTree = "<group>"; };
+		A9221D0216E79CB10079F99B /* fix_google_sdk_arm_issue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fix_google_sdk_arm_issue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9221CF516E79CB10079F99B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9221CFC16E79CB10079F99B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9221CEF16E79CB10079F99B = {
+			isa = PBXGroup;
+			children = (
+				A9221CFD16E79CB10079F99B /* fix_google_sdk_arm_issue */,
+				A9221CFA16E79CB10079F99B /* Frameworks */,
+				A9221CF916E79CB10079F99B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9221CF916E79CB10079F99B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9221CF816E79CB10079F99B /* libfix_google_sdk_arm_issue.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9221CFA16E79CB10079F99B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9221CFB16E79CB10079F99B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9221CFD16E79CB10079F99B /* fix_google_sdk_arm_issue */ = {
+			isa = PBXGroup;
+			children = (
+				A9221D0016E79CB10079F99B /* fix_google_sdk_arm_issue.h */,
+				A9221D0216E79CB10079F99B /* fix_google_sdk_arm_issue.m */,
+				A9221CFE16E79CB10079F99B /* Supporting Files */,
+			);
+			path = fix_google_sdk_arm_issue;
+			sourceTree = "<group>";
+		};
+		A9221CFE16E79CB10079F99B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9221CFF16E79CB10079F99B /* fix_google_sdk_arm_issue-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9221CF716E79CB10079F99B /* fix_google_sdk_arm_issue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9221D0616E79CB10079F99B /* Build configuration list for PBXNativeTarget "fix_google_sdk_arm_issue" */;
+			buildPhases = (
+				A9221CF416E79CB10079F99B /* Sources */,
+				A9221CF516E79CB10079F99B /* Frameworks */,
+				A9221CF616E79CB10079F99B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fix_google_sdk_arm_issue;
+			productName = fix_google_sdk_arm_issue;
+			productReference = A9221CF816E79CB10079F99B /* libfix_google_sdk_arm_issue.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9221CF016E79CB10079F99B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Watson;
+			};
+			buildConfigurationList = A9221CF316E79CB10079F99B /* Build configuration list for PBXProject "fix_google_sdk_arm_issue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9221CEF16E79CB10079F99B;
+			productRefGroup = A9221CF916E79CB10079F99B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9221CF716E79CB10079F99B /* fix_google_sdk_arm_issue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9221CF416E79CB10079F99B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9221D0316E79CB10079F99B /* fix_google_sdk_arm_issue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9221D0416E79CB10079F99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9221D0516E79CB10079F99B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9221D0716E79CB10079F99B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/fix_google_sdk_arm_issue.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fix_google_sdk_arm_issue/fix_google_sdk_arm_issue-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A9221D0816E79CB10079F99B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/fix_google_sdk_arm_issue.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fix_google_sdk_arm_issue/fix_google_sdk_arm_issue-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9221CF316E79CB10079F99B /* Build configuration list for PBXProject "fix_google_sdk_arm_issue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9221D0416E79CB10079F99B /* Debug */,
+				A9221D0516E79CB10079F99B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9221D0616E79CB10079F99B /* Build configuration list for PBXNativeTarget "fix_google_sdk_arm_issue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9221D0716E79CB10079F99B /* Debug */,
+				A9221D0816E79CB10079F99B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9221CF016E79CB10079F99B /* Project object */;
+}
