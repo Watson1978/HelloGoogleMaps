@@ -13,14 +13,3 @@ Motion::Project::App.setup do |app|
   app.frameworks += %w{AVFoundation CoreData CoreLocation CoreText GLKit ImageIO OpenGLES QuartzCore SystemConfiguration}
   app.libs       += %w{/usr/lib/libicucore.dylib /usr/lib/libstdc++.dylib /usr/lib/libz.dylib}
 end
-
-require 'rubygems'
-require 'rake/hooks'
-before :device do
-  # to avoid https://code.google.com/p/gmaps-api-issues/issues/detail?id=5018
-  Motion::Project::App.setup do |app|
-    app.vendor_project('vendor/fix_google_sdk_arm_issue',
-      :xcode,
-      :headers_dir => 'fix_google_sdk_arm_issue')
-  end
-end
