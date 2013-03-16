@@ -18,7 +18,10 @@
 /** Marker position. */
 @property (nonatomic, assign) CLLocationCoordinate2D position;
 
-/** Title text, shown prominently in the info window when selected. */
+/**
+ * Title text, shown prominently in the info window when selected.
+ * If both title and snippet are empty, no info window is displayed.
+ */
 @property (nonatomic, copy) NSString *title;
 
 /** Snippet text, shown beneath the title in the info window when selected. */
