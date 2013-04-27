@@ -8,7 +8,16 @@
 //  Service: https://developers.google.com/maps/terms
 //
 
+/** Settings for the user interface of a GMSMapView. */
 @interface GMSUISettings : NSObject
+
+/**
+ * Sets the preference for whether all gestures should be enabled (default) or
+ * disabled. This doesn't restrict users from tapping any on screen buttons to
+ * move the camera (e.g., compass or zoom controls), nor does it restrict
+ * programmatic movements and animation.
+ */
+- (void)setAllGesturesEnabled:(BOOL)enabled;
 
 /**
  * Controls whether scroll gestures are enabled (default) or disabled. If
@@ -21,10 +30,6 @@
  * Controls whether zoom gestures are enabled (default) or disabled. If
  * enabled, users may double tap/two-finger tap or pinch to zoom the camera.
  * This does not limit programmatic movement of the camera.
- *
- * Note that zoom gestures may allow the user to pan around the map, as a double
- * tap gesture will move the camera towards the specified point, and conversely
- * for two-finger tap to zoom out.
  */
 @property (nonatomic, assign) BOOL zoomGestures;
 
@@ -41,5 +46,23 @@
  * does not limit programmatic control of the camera's bearing.
  */
 @property (nonatomic, assign) BOOL rotateGestures;
+
+/**
+ * Enables or disables the compass. The compass is an icon on the map that
+ * indicates the direction of north on the map.
+ *
+ * If enabled, it is only shown when the camera is rotated away from its default
+ * orientation (bearing of 0). When a user taps the compass, the camera orients
+ * itself to its default orientation and fades away shortly after. If disabled,
+ * the compass will never be displayed.
+ */
+@property (nonatomic, assign) BOOL compassButton;
+
+/**
+ * Enables or disables the My Location button. This is a button visible on the
+ * map that, when tapped by users, will center the map on the current user
+ * location.
+ */
+@property (nonatomic, assign) BOOL myLocationButton;
 
 @end

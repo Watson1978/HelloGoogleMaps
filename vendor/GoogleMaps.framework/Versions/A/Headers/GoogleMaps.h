@@ -13,19 +13,21 @@
 #import <UIKit/UIKit.h>
 
 #import <GoogleMaps/GMSCameraPosition.h>
+#import <GoogleMaps/GMSCameraUpdate.h>
+#import <GoogleMaps/GMSCircle.h>
 #import <GoogleMaps/GMSCoordinateBounds.h>
 #import <GoogleMaps/GMSGeocoder.h>
 #import <GoogleMaps/GMSGroundOverlay.h>
-#import <GoogleMaps/GMSGroundOverlayOptions.h>
+#import <GoogleMaps/GMSMapLayer.h>
 #import <GoogleMaps/GMSMapView.h>
+#import <GoogleMaps/GMSMapView+Animation.h>
+#import <GoogleMaps/GMSMapView+Overlays.h>
 #import <GoogleMaps/GMSMarker.h>
-#import <GoogleMaps/GMSMarkerOptions.h>
 #import <GoogleMaps/GMSMutablePath.h>
 #import <GoogleMaps/GMSPath.h>
+#import <GoogleMaps/GMSPolygon.h>
 #import <GoogleMaps/GMSPolyline.h>
-#import <GoogleMaps/GMSPolylineOptions.h>
 #import <GoogleMaps/GMSProjection.h>
 #import <GoogleMaps/GMSReverseGeocodeOutput.h>
-#import <GoogleMaps/GMSScreenshot.h>
 #import <GoogleMaps/GMSServices.h>
 #import <GoogleMaps/GMSUISettings.h>

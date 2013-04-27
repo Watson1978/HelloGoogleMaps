@@ -8,10 +8,14 @@
 //  Service: https://developers.google.com/maps/terms
 //
 
-#import <CoreLocation/CoreLocation.h>
+#import <GoogleMaps/GMSOverlay.h>
 
-/** Ground overlay on a map. */
-@protocol GMSGroundOverlay <NSObject>
+/**
+ * GMSGroundOverlay specifies the available options for a ground overlay that
+ * exists on the Earth's surface. Unlike a marker, the position of a ground
+ * overlay is specified explicitly and it does not face the camera.
+ */
+@interface GMSGroundOverlay : GMSOverlay
 
 /**
  * The position of this ground overlay, or more specifically, the physical
@@ -20,27 +24,40 @@
 @property (nonatomic, assign) CLLocationCoordinate2D position;
 
 /**
- * As groundAnchor on GMSMarker.  Specifies where the overlay is anchored to the
- * earth in relation to its position.
+ * As groundAnchor on GMSMarker. Specifies where the ground overlay is anchored
+ * to the earth in relation to its position.
  */
 @property (nonatomic, assign) CGPoint anchor;
 
-/** Icon to render on the earth.  Unlike for GMSMarker, this is required. */
+/** Icon to render on the earth. Unlike for GMSMarker, this is required. */
 @property (nonatomic, strong) UIImage *icon;
 
 /**
- * The zoom level at which this ground overlay is displayed at 1:1.  This value
- * is clamped in the range [kGMSMinZoomLevel, kGMSMaxZoomLevel].
+ * The zoom level at which this ground overlay is displayed at 1:1. Will be
+ * clamped to ensure that it is at least 1.
  */
 @property (nonatomic, assign) CGFloat zoomLevel;
 
 /**
- * Bearing of this ground overlay, in degrees.  The default value, zero, points
- * this overlay up/down along the normal Y axis of the earth.
+ * Bearing of this ground overlay, in degrees. The default value, zero, points
+ * this ground overlay up/down along the normal Y axis of the earth.
  */
 @property (nonatomic, assign) CLLocationDirection bearing;
 
-/** Removes this ground overlay from the map. */
-- (void)remove;
+/**
+ * Convenience constructor for GMSGroundOverlay for a particular position and
+ * icon. Other properties will have default values.
+ */
++ (instancetype)groundOverlayWithPosition:(CLLocationCoordinate2D)position
+                                     icon:(UIImage *)icon;
 
 @end
+
+/**
+ * The default position of the ground anchor of a GMSGroundOverlay: the center
+ * point of the icon.
+ */
+FOUNDATION_EXTERN const CGPoint kGMSGroundOverlayDefaultAnchor;
+
+/** The default zoom level this ground overlay is displayed at. */
+FOUNDATION_EXTERN const CGFloat kGMSGroundOverlayDefaultZoom;
