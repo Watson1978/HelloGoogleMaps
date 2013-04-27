@@ -66,6 +66,21 @@
                                   bearing:(CLLocationDirection)bearing
                              viewingAngle:(double)viewingAngle;
 
+/**
+ * Get the zoom level at which |meters| distance, at given |coord| on Earth,
+ * correspond to the specified number of screen |points|.
+ *
+ * For extremely large or small distances the returned zoom level may be
+ * smaller or larger than the minimum or maximum zoom level
+ * allowed on the camera.
+ *
+ * This helper method is useful for building camera positions that contain
+ * specific physical areas on Earth.
+ */
++ (CGFloat)zoomAtCoordinate:(CLLocationCoordinate2D)cooord
+                  forMeters:(CGFloat)meters
+                  perPoints:(CGFloat)points;
+
 /** Location on the Earth towards which the camera points. */
 @property (nonatomic, readonly, getter=targetAsCoordinate) CLLocationCoordinate2D target;
 

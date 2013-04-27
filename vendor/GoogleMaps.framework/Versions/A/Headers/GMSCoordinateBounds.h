@@ -11,6 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GMSProjection.h>
 
+@class GMSPath;
+
 /**
  * GMSCoordinateBounds represents a rectangular bounding box on the Earth's
  * surface. Is is immutable and can't be modified after construction.
@@ -31,7 +33,7 @@
  * ambiguity.
  */
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coord1
-           andCoordinate:(CLLocationCoordinate2D)coord2;
+              coordinate:(CLLocationCoordinate2D)coord2;
 
 /**
  * Inits bounds that encompass |region|.
@@ -39,14 +41,39 @@
 - (id)initWithRegion:(GMSVisibleRegion)region;
 
 /**
+ * Inits bounds that encompass |path|.
+ */
+- (id)initWithPath:(GMSPath *)path;
+
+/**
  * Allocates and returns a new GMSCoordinateBounds, representing
  * the current bounds extended to include the passed-in coordinate.
  */
-- (GMSCoordinateBounds *)including:(CLLocationCoordinate2D)coordinate;
+- (GMSCoordinateBounds *)includingCoordinate:(CLLocationCoordinate2D)coordinate;
+
+/**
+ * Allocates and returns a new GMSCoordinateBounds, representing
+ * the current bounds extended to include the entire other bounds.
+ */
+- (GMSCoordinateBounds *)includingBounds:(GMSCoordinateBounds *)other;
 
 /**
  * Returns YES if |coordinate| is contained within the bounds.
  */
 - (BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate;
+
+/**
+ * Returns YES if |other| overlaps with this bounds.
+ */
+- (BOOL)intersectsBounds:(GMSCoordinateBounds *)other;
+
+/**
+ * Returns NO if this bounds does not contain any points.
+ * For example, [[GMSCoordinateBounds alloc] init].valid == NO.
+ * When an invalid bounds is expanded with valid coordinates via
+ * includingCoordinate: or includingBounds:, the resulting bounds will be valid
+ * but contain only the new coordinates.
+ */
+@property (readonly, getter=isValid) BOOL valid;
 
 @end

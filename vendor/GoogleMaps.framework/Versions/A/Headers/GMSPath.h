@@ -29,4 +29,14 @@
 /** Returns kCLLocationCoordinate2DInvalid if |index| >= count. */
 - (CLLocationCoordinate2D)coordinateAtIndex:(NSUInteger)index;
 
+/**
+ * Initializes a newly allocated path from |encodedPath|. This format
+ * is described at:
+ * https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+ */
++ (instancetype)pathFromEncodedPath:(NSString *)encodedPath;
+
+/** Returns an encoded string of the path in the format described above. */
+- (NSString *)encodedPath;
+
 @end

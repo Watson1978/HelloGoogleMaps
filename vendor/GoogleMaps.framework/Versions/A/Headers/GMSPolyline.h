@@ -8,32 +8,33 @@
 //  Service: https://developers.google.com/maps/terms
 //
 
+#import <GoogleMaps/GMSOverlay.h>
+
 @class GMSPath;
 
 /**
- * A polyline on a map.
+ * GMSPolyline specifies the available options for a polyline that exists on the
+ * Earth's surface. It is drawn as a physical line between the points specified
+ * in |path|.
  */
-@protocol GMSPolyline <NSObject>
+@interface GMSPolyline : GMSOverlay
 
 /** The path that describes this polyline. */
 @property (nonatomic, copy) GMSPath *path;
 
-/** The UIColor used to render the polyline. Defaults to blueColor. */
-@property (nonatomic, strong) UIColor *color;
-
 /** The width of the line in screen points. Defaults to 1. */
-@property (nonatomic, assign) float width;
+@property (nonatomic, assign) CGFloat strokeWidth;
+
+/** The UIColor used to render the polyline. Defaults to blueColor. */
+@property (nonatomic, strong) UIColor *strokeColor;
 
 /** If this line should be rendered with geodesic correction. */
 @property (nonatomic, assign) BOOL geodesic;
 
 /**
- * The accessibility label of this polyline, as per the UIAccessibility
- * protocol.
+ * Convenience constructor for GMSPolyline for a particular path.
+ * Other properties will have default values.
  */
-@property (nonatomic, copy) NSString *accessibilityLabel;
-
-/** Removes this polyline from the map. */
-- (void)remove;
++ (instancetype)polylineWithPath:(GMSPath *)path;
 
 @end
