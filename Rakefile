@@ -11,5 +11,5 @@ Motion::Project::App.setup do |app|
     :products    => %w{GoogleMaps},
     :headers_dir => 'Headers')
   app.frameworks += %w{AVFoundation CoreData CoreLocation CoreText GLKit ImageIO OpenGLES QuartzCore SystemConfiguration}
-  app.libs       += %w{/usr/lib/libicucore.dylib /usr/lib/libstdc++.dylib /usr/lib/libz.dylib}
+  app.libs       += %w{/usr/lib/libicucore.dylib /usr/lib/libc++.dylib /usr/lib/libz.dylib}
 end

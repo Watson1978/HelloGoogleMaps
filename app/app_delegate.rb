@@ -7,11 +7,11 @@ class GoogleMapsController < UIViewController
     @map_view.myLocationEnabled = true
     self.view = @map_view
 
-    options = GMSMarkerOptions.alloc.init
-    options.position = CLLocationCoordinate2DMake(35.689466, 139.700196)
-    options.title = "Shinjuku"
-    options.snippet = "Japan"
-    @map_view.addMarkerWithOptions(options)
+    marker = GMSMarker.alloc.init
+    marker.position = CLLocationCoordinate2DMake(35.689466, 139.700196)
+    marker.title = "Shinjuku"
+    marker.snippet = "Japan"
+    marker.map = @map_view
   end
 end
 
